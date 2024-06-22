@@ -1,0 +1,478 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #212121;
+  color: white;
+  font-size: bolder;
+  height: 100vh;
+  width: 100vw;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.major-btn,.major-btn2 , .major-btn3{
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+h1{
+
+  text-align: center;
+  margin-top: 24rem ;
+
+}
+.major-btn a{
+  text-decoration: none;
+  color: white;
+}
+.major-btn2 a , .major-btn3 a{
+  text-decoration: none;
+  color: white;
+}
+/* Reset and normalize */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+}
+
+/* Long div (login-div) */
+/* Default styles */
+.login-div {
+  position: relative;
+  margin: 5rem auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -0.3rem;
+}
+
+.right {
+  position: relative;
+  width: 40%;
+  margin-left: 2rem;
+  height: 50vh;
+  top: -3rem;
+}
+
+.right img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.img1, .img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.img1 {
+  z-index: 10;
+}
+
+.img2 {
+  z-index: 2;
+  left: 2rem;
+  top: 2rem;
+}
+
+.left {
+  width: 32vw;
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  padding: 1rem;
+  top: -1rem;
+  gap: 1rem;
+}
+
+.head1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 1.3rem;
+  opacity: 50%;
+}
+
+.text2 {
+  font-size: 1.2rem;
+  margin-left: -5rem;
+  color: rgb(0, 162, 255);
+}
+
+.button {
+  width: 100%;
+}
+
+.button input {
+  color: white;
+  width: 85%;
+  padding: 0.7rem 0.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  border-bottom: 3px solid rgb(67, 63, 63);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button label {
+  margin-left: -16rem;
+}
+
+.btn {
+  all: unset;
+  width: 70%;
+  background-color: yellow;
+  color: black;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  position: relative;
+  top: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.password-container svg {
+  cursor: pointer;
+  margin-left: -30px;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 1200px) {
+  .login-div {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .login-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .left {
+    width: 80%;
+    margin-top: 2rem;
+  }
+
+  .button input {
+    width: 100%;
+  }
+
+  .btn {
+    width: 50%;
+    top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left {
+    width: 90%;
+  }
+
+  .btn {
+    width: 60%;
+    top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .right,
+  .left {
+    width: 100%;
+  }
+
+  .btn {
+    width: 80%;
+    top: 1rem;
+  }
+}
+
+.head1{
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  width: fit-content;
+}
+.Radio-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Radio-btn button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0.5;
+}
+
+.Radio-btn button:hover {
+  background-color: #666;
+}
+
+.Radio-btn button.active {
+  opacity: 1;
+
+}
+/* General Form Styling */
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.name > div {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Adjust the width to make both fields fit nicely */
+}
+
+.name label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+.name input {
+  padding: 0.7rem;
+  border-left: rgb(52, 51, 51);
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+
+
+}
+
+.name input::placeholder {
+  color: #aaa;
+}
+
+.name input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 2px;
+}
+
+.email label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.email input {
+ 
+  width: 90%; /* Make the input width 90% of its parent container */
+  padding: 0.7rem;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.email input::placeholder {
+  color: #aaa;
+}
+
+.email input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.password-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.password-section label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+.password-input-container {
+  display: flex;
+  align-items: center;
+  width: 90%; /* Make the container width 90% of its parent container */
+  position: relative;
+}
+.password-section label{
+  text-align: left;
+  
+}
+.password-section svg{
+  cursor: pointer;
+  margin-left: -30px;
+}
+
+.password-input-container input {
+  width: calc(100% - 2rem); /* Adjust width to leave space for the icon */
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.password-input-container input::placeholder {
+  color: #aaa;
+}
+
+.password-input-container input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.password-input-container .fa-icon {
+  position: absolute;
+  right: 0.5rem;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.password-input-container .fa-icon:hover {
+  color: #007bff;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name {
+      flex-direction: column;
+  }
+
+  .name > div {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+
+  .email input, .password-input-container {
+      width: 100%; /* Make the input and container full width on smaller screens */
+  }
+
+  .password-input-container input {
+      width: calc(100% - 2rem); /* Adjust width to leave space for the icon */
+  }
+}
+@media (max-width: 1200px) {
+  .name > div {
+    width: 100%; /* Make both fields full width on smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .Radio-btn button {
+    width: 48%; /* Adjust button width for better spacing */
+  }
+
+  .password-input-container input {
+    width: calc(100% - 3.5rem); /* Adjust width to leave more space for icon */
+  }
+}
+
+@media (max-width: 768px) {
+  .name,
+  .email,
+  .password-section {
+    margin-bottom: 0.5rem; /* Reduce margin bottom for better stacking */
+  }
+
+  .name > div,
+  .email input,
+  .password-input-container {
+    width: 100%; /* Make all inputs and containers full width */
+  }
+
+  .password-input-container input {
+    width: calc(100% - 3rem); /* Adjust width to leave space for the icon */
+  }
+
+  .btn {
+    width: 100%; /* Make button full width on smaller screens */
+  }
+}
+
+
