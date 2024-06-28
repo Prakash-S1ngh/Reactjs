@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x:hidden ;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App{
+  width: 100vw;
+}
+img {
+  object-fit: contain; /* Ensures the image fits within the container */
+  width: 100%; /* Makes the image fill the width of its container */
+  height: 100%; /* Makes the image fill the height of its container */
+}
+
+.img {
+  height: 112px;
+  width: 192px;
+  overflow: hidden; /* Ensures that any overflow content is hidden */
+  display: flex; /* Centers the image if it's smaller than the container */
+  justify-content: center;
+  align-items: center;
+}
+
+.Navigation{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(102, 26, 26);
+  color: white;
+  padding: 0 1rem;
+}
+.btns{
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home ,.cart{
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+a{
+  text-decoration: none;
+}
+/* styles.css */
+
+/* Container for all product cards */
+.Home-App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Individual product card */
+.prod-card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Ensure the card scales up on hover */
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Product image */
+.prod-card .img {
+  height: 200px; /* Adjust height as needed */
+  border-radius: 8px;
+}
+
+.prod-card .img img {
+  object-fit: contain; /* Ensures the image fits within the container */
+  width: 100%; /* Makes the image fill the width of its container */
+  height: 100%; /* Makes the image fill the height of its container */
+  transition: transform 0.3s ease;
+}
+
+/* Product header */
+.prod-card .prod-head {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Product description */
+.prod-card .description {
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+/* Product footer */
+.prod-card .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prod-card .price {
+  font-weight: bold;
+  color: #333333;
+}
+
+.prod-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prod-card button:hover {
+  background-color: #0056b3;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.left-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  flex-grow: 1;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-desc {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+.icon {
+  cursor: pointer;
+  color: #ff0000;
+}
+
+/* App.css */
+
+/* Container for the whole cart component */
+.App-cart {
+  margin:  0 auto;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Left section for cart items */
+.left {
+
+  width: 60%;
+  margin-right: 20px;
+}
+
+/* Empty cart message */
+.empty {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.empty p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.empty button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.empty button:hover {
+  background-color: #0056b3;
+}
+
+/* Cart items list */
+.cart-item {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-img {
+  flex: 0 0 150px;
+  overflow: hidden;
+}
+
+.left-img img {
+  width: 100%;
+  height: auto;
+}
+
+.right {
+  display: flex;
+  width: 40%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.summaryhead {
+  font-size: 2.5rem; /* Larger font size for heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.head-of-summary {
+  font-size: 1.5rem; /* Larger font size for sub-heading */
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.count, .amount {
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Regular font size for count and amount */
+}
+
+.amount {
+  font-weight: bold;
+}
+
+.checkout {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkout:hover {
+  background-color: #218838;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .App-cart {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .left, .right {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+  }
+
+  .right {
+      margin-top: 20px;
+  }
+}
